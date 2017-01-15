@@ -4,6 +4,7 @@ const cheerio = require("cheerio");
 var np = 4;
 
 for(var i = 0; i < np; i++) {
+    //var url = "http://www.publicsurplus.com/sms/browse/cataucs?slth=&catid=1&page=" + i + "&sortBy=timeLeft";
     var url = "http://www.publicsurplus.com/sms/all,fl/browse/cataucs?slth=&catid=1&page=" + i + "&sortBy=timeLeft";
     request(url, function(err, response, html) {
         var $ = cheerio.load(html);
